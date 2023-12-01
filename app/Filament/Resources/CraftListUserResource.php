@@ -6,7 +6,6 @@ use App\Filament\Resources\CraftListUserResource\Pages;
 use App\Filament\Resources\CraftListUserResource\RelationManagers;
 use App\Models\Company;
 use App\Models\CraftListUser;
-use Filament\Actions\CreateAction;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
