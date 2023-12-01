@@ -9,19 +9,19 @@ class TestController extends Controller
 {
     public function test()
     {
-        $needle = array(
-            'fruit'=>'banana', 'vegetable'=>'carrot'
-        );
+        $needle = [
+            'fruit' => 'banana', 'vegetable' => 'carrot',
+        ];
 
-        $haystack = array(
-            array('vegetable'=>'carrot', 'fruit'=>'banana'),
-            array('fruit'=>'apple', 'vegetable'=>'celery')
-        );
+        $haystack = [
+            ['vegetable' => 'carrot', 'fruit' => 'banana'],
+            ['fruit' => 'apple', 'vegetable' => 'celery'],
+        ];
 
-        dump(in_array($needle, $haystack, true) ? 'true' : 'false') ;
-// Output is 'false'
+        dump(in_array($needle, $haystack, true) ? 'true' : 'false');
+        // Output is 'false'
 
-        dump(in_array($needle, $haystack) ? 'true' : 'false') ;
+        dump(in_array($needle, $haystack) ? 'true' : 'false');
 
         //return $this->success(SpeedCurd::SearchLists(CraftListUser::query(),[])->get());
     }

@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CraftListUserResource\Pages;
-use App\Filament\Resources\CraftListUserResource\RelationManagers;
 use App\Models\Company;
 use App\Models\CraftListUser;
 use Filament\Forms;
@@ -28,9 +27,9 @@ class CraftListUserResource extends Resource
                     ->getSearchResultsUsing(fn (string $search): array => Company::where('alias', 'like', "%{$search}%")->limit(50)->pluck('alias', 'company_uuid')->toArray())
                     ->getOptionLabelUsing(fn ($value): ?string => Company::find($value)?->alias),
                 Forms\Components\TextInput::make('name')
-                ->required(),
+                    ->required(),
                 Forms\Components\TextInput::make('telephone')
-                ->required(),
+                    ->required(),
             ]);
     }
 
@@ -48,11 +47,11 @@ class CraftListUserResource extends Resource
                 Tables\Actions\EditAction::make(),
             ]);
 
-//            ->bulkActions([
-//                Tables\Actions\BulkActionGroup::make([
-//                    Tables\Actions\DeleteBulkAction::make(),
-//                ]),
-//            ]);
+        //            ->bulkActions([
+        //                Tables\Actions\BulkActionGroup::make([
+        //                    Tables\Actions\DeleteBulkAction::make(),
+        //                ]),
+        //            ]);
     }
 
     public static function getRelations(): array

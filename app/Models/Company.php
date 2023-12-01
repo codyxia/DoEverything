@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
 /**
  * App\Models\Company
  *
@@ -37,6 +36,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int|null $allow_push_err_doc
  * @property float|null $left_price
  * @property float|null $pay_price
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Company newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Company newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Company query()
@@ -68,6 +68,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Company whereTotalPrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Company whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Company whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Company extends Model
